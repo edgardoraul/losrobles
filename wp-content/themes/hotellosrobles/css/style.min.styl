@@ -1,0 +1,1487 @@
+@import "normalize.styl"
+@import "fonts.styl"
+@import "icomoon.styl"
+@import "fancybox.styl"
+@import "datepicker.styl"
+@import "styles-rtl.styl"
+// @import "styles.styl"
+// Variables
+$naranja = #EA7A3A
+$ladrillo = #F9602C
+$oliva = #AEA763
+
+
+/* Las etiquetas */
+a
+	color: $naranja;
+
+article
+	padding: 0.1em 0.3em;
+
+article.article_right img.aligncenter
+	border: 1px solid #fff;
+	display: block;
+	height: auto;
+	width: 260px;
+
+article.habitaciones a
+	text-decoration: none;
+
+article.habitaciones a h2	
+	transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+
+article.habitaciones a:hover h2
+	background: #283520;
+	color: $oliva;
+
+article.habitaciones div.habitacion_listado figcaption .boton_enviar
+	display: none;
+
+article.habitaciones div.habitacion_listado figcaption .vermas
+	display: inline-block;
+
+article cite, article blockquote
+	border-left: 7px solid #ddd;
+	display: inline-block;
+	font-size: 15px;
+	margin: 0 0.2em 0 1em;
+	padding: 0.2em 1em;
+
+body
+	background: $oliva;
+	color: #efefef;
+	font-family: 'Open Sans', Arial, Sans Serif;
+	font-size: 16px;
+
+div.back, div.next
+	position: absolute;
+	top: 40%;
+	z-index: 120;
+
+div.habitacion_listado
+	border-top: 1px solid $oliva;
+	box-shadow: 0px 10px 5px -10px rgba(250,250,250,0.25) inset;
+	-o-box-shadow: 0px 10px 5px -10px rgba(250,250,250,0.25) inset;
+	-ms-box-shadow: 0px 10px 5px -10px rgba(250,250,250,0.25) inset;
+	-moz-box-shadow: 0px 10px 5px -10px rgba(250,250,250,0.25) inset;
+	-webkit-box-shadow: 0px 10px 5px -10px rgba(250,250,250,0.25) inset;
+
+div.habitacion_listado a h3
+	display: inline-block;
+	font-weight: lighter;
+	margin-left: 0.5em;
+	padding: 0.2em 1em;
+	transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+
+div.habitacion_listado a:hover h3
+	background: #EA7A3A;
+	border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	-ms-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	color: #556D32;
+	text-shadow: -0.5px -0.3px 0.5px #fff;
+	-o-text-shadow: -0.5px -0.3px 0.5px #fff;
+	-ms-text-shadow: -0.5px -0.3px 0.5px #fff;
+	-moz-text-shadow: -0.5px -0.3px 0.5px #fff;
+	-webkit-text-shadow: -0.5px -0.3px 0.5px #fff;
+
+div.habitacion_listado figcaption .boton_enviar
+	display: inline-block;
+	font-style: normal;
+
+div.habitacion_listado figcaption time
+	background: $oliva;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	border-radius: 0.3em !important;
+	-o-border-radius: 0.3em !important;
+	-ms-border-radius: 0.3em !important;
+	-moz-border-radius: 0.3em !important;
+	-webkit-border-radius: 0.3em !important;
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;	
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	color: #435A2B;
+	display: block;
+	font-style: normal;
+	margin-left: 1em;
+	padding: 0.5em 0.5em 0.3em 0.3em;
+	text-align: right;
+	text-shadow: 1px 1px 1px #fff;
+	-o-text-shadow: 1px 1px 1px #fff;
+	-ms-text-shadow: 1px 1px 1px #fff;
+	-moz-text-shadow: 1px 1px 1px #fff;
+	-webkit-text-shadow: 1px 1px 1px #fff;
+
+div.imagen figure
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+
+div.imagen figure a
+	transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+
+div.imagen figure a:hover
+	opacity: 0.6;
+
+div.imagen figure img
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height: auto;
+	margin: 0;
+	width: 100%;
+
+div.imagen figure figcaption
+	// font-style: italic;
+	line-height: 1.3em;
+	padding: 0 1em 1em 0.1em;
+
+div.imagen figure div
+	position: relative;
+
+div.imagen figure div span
+	background: rgba(0,0,0,0.6);
+	bottom: 1em;
+	display: inline-block;
+	padding: 0.5em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-transform: capitalize;
+
+figcaption .texto
+	font-style: normal;
+
+figcaption a.boton_enviar
+	display: none;
+
+form, form p
+	position: relative;
+	text-align: left;
+
+footer
+	color: #3C4E28;
+	padding-bottom: 1em;
+	text-align: center;
+
+footer p
+	text-align: center;
+
+footer #footer_nav
+	border-bottom: 1px solid #5C6933;
+	font-family: Arial;
+
+footer #footer_nav ul
+	list-style: none;
+	margin: 1em auto;
+	padding: 0;
+
+footer #footer_nav ul li
+	display: inline-block;
+	margin: 0.6em 0.4em;
+
+footer #footer_nav ul li a, .subpaginas li a
+	color: #3C4E28;
+	border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	-ms-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	padding: 0.5em;
+	text-decoration: none;
+	transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+
+footer #footer_nav ul li.current-menu-item a, footer #footer_nav ul li.current_page_item a
+	background: $ladrillo;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	color: #eee;
+	font-weight: bolder;
+
+footer #footer_nav ul li a:hover, .subpaginas li a:hover
+	background: #5C7535;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	color: #eee;
+
+footer #footer_nav ul li ul
+	display: none;
+
+footer sub a
+	color: #B74514;
+	text-decoration: none;
+
+footer sub a:hover
+	text-decoration: underline;
+
+h1
+	font-size: 1.6em;
+
+h1, h2, h3, h4, h5, h6
+	color: $ladrillo;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	margin-left: 0;
+	padding-left: 0;
+	text-transform: uppercase;
+
+header nav
+	display block
+	z-index 999
+	/*height: 0;
+	opacity: 0;
+	transition: all 0.6s linear;
+	-o-transition: all 0.6s linear;
+	-ms-transition: all 0.6s linear;
+	-moz-transition: all 0.6s linear;
+	-webkit-transition: all 0.6s linear;
+	visibility: hidden;*/
+
+input[type="email"], input[type="number"], input[type="tel"], input[type="text"], input[type="url"], textarea
+	font-family: monospace;
+	font-size: 1.2em;
+	margin: 0.2em 0.1em;
+	width: 95%;
+
+input.ancho, textarea.ancho
+	width: 98%;
+
+nav
+	display: none;
+
+nav ul
+	margin: 0;
+	padding: 0;
+
+nav ul li
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+nav ul li a
+	color: #eee;
+	border-bottom: 1px solid #eee;
+	display: block;
+	margin: 0;
+	padding: 0.7em 0 0.7em 1em;
+	text-decoration: none;
+	transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+
+nav ul li a:before, nav ul li ul li a:before
+	content: "\e61e";
+	font-family: "icomoon";
+	font-size: 0.6em;
+	margin-right: 1em;
+
+nav ul li a:hover, nav ul li.current-menu-item a:hover, nav ul li.current_page_item a:hover
+	background: #eee;
+	color: #434343;
+
+nav ul li.current-menu-item a, nav ul li.current_page_item a
+	background: #597533;
+	font-weight: bolder;
+
+nav ul li.current_page_item ul li a
+	background: none;
+	font-weight: normal;
+
+nav ul li ul
+	padding-left: 1.5em;
+
+p
+	text-align: justify;
+
+section article img
+	max-width: 100%;
+
+
+/* Las Clases */
+.wpcf7-select
+	background-color: $oliva
+	border: none;
+	padding: 0.5em;
+
+.table
+	border-bottom: 5px solid $ladrillo;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: block;
+	font-size: 0.8em;
+	margin: 0;
+	width: 100%;
+
+.table caption
+	border: 1px solid $ladrillo;
+	padding: 0.5em;
+	text-align: center;
+	text-transform: uppercase;
+
+.table tbody tr td
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-align: right;
+	vertical-align top
+	width: 100%;
+
+.table tbody tr td:first-child
+	text-align: left;
+
+.table tbody tr:nth-child(even)
+	background: #26361E;
+
+.table thead tr th
+	// background: $ladrillo;
+	border-bottom: 4px solid $ladrillo;
+	border-top: 4px solid $ladrillo;
+	padding-right: 0.3em;
+	text-align: right;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-o-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-moz-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-webkit-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	vertical-align: top;
+	width: 100%;
+
+.table thead tr th:first-child
+	padding-left: 0;
+	border-left: none;
+	text-align: left;
+
+/* Los ID's */
+#boton_menu
+	display: block;
+	box-shadow: 0px -3px 5px -3px #000 inset;
+	-o-box-shadow: 0px -3px 5px -3px #000 inset;
+	-ms-box-shadow: 0px -3px 5px -3px #000 inset;
+	-moz-box-shadow: 0px -3px 5px -3px #000 inset;
+	-webkit-box-shadow: 0px -3px 5px -3px #000 inset;
+
+#boton_menu a, .boton_enviar
+	background: rgb(224,137,83);
+	background: -moz-linear-gradient(top, rgba(224,137,83,1) 0%, rgba(226,125,58,1) 53%, rgba(224,102,26,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,137,83,1)), color-stop(53%,rgba(226,125,58,1)), color-stop(100%,rgba(224,102,26,1)));
+	background: -webkit-linear-gradient(top, rgba(224,137,83,1) 0%,rgba(226,125,58,1) 53%,rgba(224,102,26,1) 100%);
+	background: -o-linear-gradient(top, rgba(224,137,83,1) 0%,rgba(226,125,58,1) 53%,rgba(224,102,26,1) 100%);
+	background: -ms-linear-gradient(top, rgba(224,137,83,1) 0%,rgba(226,125,58,1) 53%,rgba(224,102,26,1) 100%);
+	background: linear-gradient(to bottom, rgba(224,137,83,1) 0%,rgba(226,125,58,1) 53%,rgba(224,102,26,1) 100%);
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#e08953', endColorstr='#e0661a',GradientType=0 )");
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	-ms-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.1em;
+	margin: 1em;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-o-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-moz-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-webkit-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+
+#boton_menu a:hover, .boton_enviar:hover
+	background: $ladrillo;
+
+#boton_menu a:active, .boton_enviar:active
+	background: red;
+
+#calendario
+	background: rgba(252,2,10,0.5) url('../img/calendario.png') no-repeat 5% center;
+	background-size: 25px 25px;
+	border-radius: 0.5em;
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	display: inline-block;
+	margin: 1em;
+	transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	text-align: right;
+
+#calendario:hover
+	background: rgba(252,2,10,0.9) url('../img/calendario.png') no-repeat 4% center;
+	background-size: 25px 25px;
+
+#calendario a
+	color: #ddd;
+	display: block;
+	font-size: 0.95em;
+	margin-left: 3em;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-o-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-moz-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-webkit-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+
+#calendario ul 
+	margin: 0;
+	padding: 1em;
+
+#calendario li
+	display: block;
+	list-style: none;
+
+#cont_5d14fd74b6c44d840b5d3a857a413018
+	display: none;
+
+#cont_f575c1bef3150b1e813500ad86637096, #cont_5d14fd74b6c44d840b5d3a857a413018 /*el widget del clima*/
+	margin: 0 auto;
+
+#contenedor
+	margin: 0 auto;
+	// max-width: 299px;
+
+#home_page
+	background: #24331d;
+	background: -moz-linear-gradient(top, #24331d 0%, #40562a 45%, #5a7634 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#24331d), color-stop(45%,#40562a), color-stop(100%,#5a7634));
+	background: -webkit-linear-gradient(top, #24331d 0%,#40562a 45%,#5a7634 100%);
+	background: -o-linear-gradient(top, #24331d 0%,#40562a 45%,#5a7634 100%);
+	background: -ms-linear-gradient(top, #24331d 0%,#40562a 45%,#5a7634 100%);
+	background: linear-gradient(to bottom, #24331d 0%,#40562a 45%,#5a7634 100%);
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#24331d', endColorstr='#5a7634',GradientType=0 )");
+
+#home_page.no_home
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0 auto;
+
+#home_section
+	padding-bottom: 1em;
+
+#home_section #home_slider
+	margin: 1em auto 0 auto;
+	max-width: 290px;
+	overflow: hidden;
+	position: relative;
+
+#home_section #home_slider img
+	width: 100%;
+
+#home_slider div.back
+	left: 1em;
+	transition: all ease 0.4s;
+	-o-transition: all ease 0.4s;
+	-ms-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	-webkit-transition: all ease 0.4s;
+
+#home_slider div.back:hover
+	transform: translateX(-0.2em);
+	-o-transform: translateX(-0.2em);
+	-ms-transform: translateX(-0.2em);
+	-moz-transform: translateX(-0.2em);
+	-webkit-transform: translateX(-0.2em);
+
+#home_slider div.back a, #home_slider div.next a, .up
+	background: rgba(0,0,0,0.5);
+	border: 3px solid #eee;
+	border-radius: 0.7em;
+	-o-border-radius: 0.7em;
+	-ms-border-radius: 0.7em;
+	-moz-border-radius: 0.7em;
+	-webkit-border-radius: 0.7em;
+	color: #eee;
+	font-family: monospace;
+	font-size: 2.2em;
+	font-weight: bolder;
+	opacity: 0.5;
+	padding: 0 0.28em;
+	text-decoration: none;
+	transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-o-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-ms-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-moz-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-webkit-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+
+#home_slider div.back a:hover, #home_slider div.next a:hover, .up:hover
+	opacity: 1;
+
+#home_slider div.back a:active, #home_slider div.next a:active, .up:active
+	background: rgb(250,43,54);
+	opacity: 1;
+
+#home_slider div.next
+	right: 1em;
+	transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-o-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-ms-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-moz-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-webkit-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+
+#home_slider div.next:hover
+	transform: translateX(0.2em);
+	-o-transform: translateX(0.2em);
+	-ms-transform: translateX(0.2em);
+	-moz-transform: translateX(0.2em);
+	-webkit-transform: translateX(0.2em);
+
+#logo_bg
+	background: rgb(34,52,27);
+	background: -moz-linear-gradient(top, rgba(34,52,27,1) 0%, rgba(36,51,28,1) 18%, rgba(46,60,29,1) 50%, rgba(56,75,36,1) 80%, rgba(60,81,39,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,52,27,1)), color-stop(18%,rgba(36,51,28,1)), color-stop(50%,rgba(46,60,29,1)), color-stop(80%,rgba(56,75,36,1)), color-stop(100%,rgba(60,81,39,1)));
+	background: -webkit-linear-gradient(top, rgba(34,52,27,1) 0%,rgba(36,51,28,1) 18%,rgba(46,60,29,1) 50%,rgba(56,75,36,1) 80%,rgba(60,81,39,1) 100%);
+	background: -o-linear-gradient(top, rgba(34,52,27,1) 0%,rgba(36,51,28,1) 18%,rgba(46,60,29,1) 50%,rgba(56,75,36,1) 80%,rgba(60,81,39,1) 100%);
+	background: -ms-linear-gradient(top, rgba(34,52,27,1) 0%,rgba(36,51,28,1) 18%,rgba(46,60,29,1) 50%,rgba(56,75,36,1) 80%,rgba(60,81,39,1) 100%);
+	background: linear-gradient(to bottom, rgba(34,52,27,1) 0%,rgba(36,51,28,1) 18%,rgba(46,60,29,1) 50%,rgba(56,75,36,1) 80%,rgba(60,81,39,1) 100%);
+	position: relative;
+
+#logo_bg figure#logo_header
+	max-width: 280px;
+
+#logo_bg figure#logo_header a img
+	transition: transform ease-in-out 0.8s;
+	-o-transition: -o-transform ease-in-out 0.8s;
+	-ms-transition: -ms-transform ease-in-out 0.8s;
+	-moz-transition: -moz-transform ease-in-out 0.8s;
+	-webkit-transition: -webkit-transform ease-in-out 0.8s;
+	width: 100%;
+
+#logo_bg figure#logo_header a:hover img
+	transform: rotateX(360deg);
+	-o-transform: rotateX(360deg);
+	-ms-transform: rotateX(360deg);
+	-moz-transform: rotateX(360deg);
+	-webkit-transform: rotateX(360deg);
+
+/* Las Clases */
+.alert
+	margin-top: 1em;
+
+.article_left div.vacaciones figure.solo_movil img, .article_left div.vacaciones figure.solo_movil div span
+	display: none;
+
+.blog time
+	color: #ddd;
+	display: inline-block;
+	font-style: italic;
+	margin: 0em 0.5em 1em 0.5em;
+	text-shadow: 0.5px 0.5px 0.3px #000;
+	-o-text-shadow: 0.5px 0.5px 0.3px #000;
+	-ms-text-shadow: 0.5px 0.5px 0.3px #000;
+	-moz-text-shadow: 0.5px 0.5px 0.3px #000;
+	-webkit-text-shadow: 0.5px 0.5px 0.3px #000;
+
+.boton_enviar.ver_fotos
+	display: inline-block;
+
+.calendario
+	padding: 0.3em;
+	position: relative;
+
+.calendario figcaption
+	background: rgba(0,0,0,0.5);
+	bottom: 1em;
+	padding: 0.3em 0.5em;
+	position: absolute;
+
+.calendario figure
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 250px;
+	padding: 0;
+
+.calendario div img
+	border: 2px solid #eee;
+	display: block;
+	height: auto;
+	margin: 0.5em auto;
+	max-width: 250px;
+
+.calendario figure img
+	border: 2px solid #eee;
+	width: 100%;
+
+.clearfix
+	clear: both;
+
+.captcha
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	max-width: 3em;
+
+.chico
+	max-width: 2em;
+
+.der, .izq
+	display: block;
+	text-align: center;
+
+.der, .izq
+	color: #ddd;
+
+.der a, .izq a
+	color: #eee;
+	text-decoration: none;
+
+.desaparecer
+	display: none;
+
+.iconos
+	position: absolute;
+	right: 1em;
+	top: 6em;
+
+.iconos ul
+	position: relative;
+	padding: 0.3em 0;
+
+.iconos ul li
+	display: inline-block;
+	list-style: none;
+
+.iconos ul li a
+	color: $oliva;
+	display: inline-block;
+	font-family: 'icomoon';
+	font-size: 1.5em;
+	padding: 0.5em 0.1em;
+	text-decoration: none;
+	text-shadow: 5px 5px 12px #000;
+	-o-text-shadow: 5px 5px 12px #000;
+	-ms-text-shadow: 5px 5px 12px #000;
+	-moz-text-shadow: 5px 5px 12px #000;
+	-webkit-text-shadow: 5px 5px 12px #000;
+	transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+
+.iconos ul li a:hover
+	color: #F95E2D;
+	text-shadow: 3px 4px 9px #000;
+	-o-text-shadow: 3px 4px 9px #000;
+	-ms-text-shadow: 3px 4px 9px #000;
+	-moz-text-shadow: 3px 4px 9px #000;
+	-webkit-text-shadow: 3px 4px 9px #000;
+	transform: skew(5deg) rotateY(17deg) translateZ(15px);
+	-o-transform: skew(5deg) rotateY(17deg) translateZ(15px);
+	-ms-transform: skew(5deg) rotateY(17deg) translateZ(15px);
+	-moz-transform: skew(5deg) rotateY(17deg) translateZ(15px);
+	-webkit-transform: skew(5deg) rotateY(17deg) translateZ(15px);
+
+.iconos ul li a:active
+	color: #598C0C;
+
+.iconos ul li ul
+	position: relative;
+	opacity: 0;
+	top: -2em;
+	transform: scale(0.1);
+	-o-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	-moz-transform: scale(0.1);
+	-webkit-transform: scale(0.1);
+	transition: all 0.6s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-o-transition: all 0.6s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-ms-transition: all 0.6s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-moz-transition: all 0.6s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-webkit-transition: all 0.6s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	visibility: hidden;
+	z-index: -1;
+
+.iconos ul li:hover ul
+	opacity: 1;
+	top: 0;
+	transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	visibility: visible;
+	z-index: 2005;
+
+.iconos ul li ul li
+	background: $ladrillo;
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	color: #eee;
+	min-width: 130px;
+	padding: 0.5em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-o-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-moz-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-webkit-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	top: 0.5em;
+	z-index: 2006;
+
+.iconos ul li:hover ul li:after
+	border-bottom: 10px solid $ladrillo;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	content: "";
+	position: absolute;
+	right: 0.7em;
+	top: -10px;
+
+/*.iconos #icono-clima:before
+	content: "\e614";
+
+.iconos #icono-feed:before
+	content: "\e607";
+
+.iconos #icono-home:before
+	content: "\e601";
+
+.iconos #icono-mail:before
+	content: "\e602";*/
+
+.mapa-ubicacion div.cpm-map
+	color: #333;
+	height: auto;
+	width: 100% !important;
+
+.navegacion--listado
+	&-abrir
+		height auto
+		opacity 1
+		visibility visible
+
+	&-cerrar
+		height 0
+		opacity 0
+		visibility hidden
+
+.ocultar
+	display: none;
+
+#pagination
+	padding: 0 1em;
+
+.pagination
+	color: #597533;
+	font-size: 1em;
+	line-height: 0.9em;
+	padding: 20px 0;
+
+
+.pagination a, .pagination span
+	background: #eee;
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display:inline-block;
+	margin: 2px 2px 2px 0;
+	padding: 11px 14px 10px 14px;
+	text-decoration:none;
+	text-shadow: 0px -0.5px 1px #fff;
+	-o-text-shadow: 0px -0.5px 1px #fff;
+	-ms-text-shadow: 0px -0.5px 1px #fff;
+	-moz-text-shadow: 0px -0.5px 1px #fff;
+	-webkit-text-shadow: 0px -0.5px 1px #fff;
+	width:auto;
+
+.pagination a
+	color: #597533;
+	font-weight: bolder;
+	transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-o-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-ms-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-moz-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+	-webkit-transition: all 0.4s cubic-bezier(0.64, -0.37, 0.46, 1.55);
+
+.pagination a:hover
+	background: #D5CEA6;
+	color: #565642;
+
+.pagination a:active
+	background: #597533;
+
+.pagination .current
+	background: #999;
+	color: #D5CEA6;
+	padding: 11px 14px 10px 14px;
+
+.servicios_anexos
+	margin: 2em auto;
+	position: relative;
+
+.servicios_anexos + hr:last-child
+	display: none;
+
+.servicios_anexos figure
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+.servicios_anexos figure figcaption
+	background: #eee;
+	border-radius: 0 0 0.5em 0.5em;
+	-o-border-radius: 0 0 0.5em 0.5em;
+	-ms-border-radius: 0 0 0.5em 0.5em;
+	-moz-border-radius: 0 0 0.5em 0.5em;
+	-webkit-border-radius: 0 0 0.5em 0.5em;
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	color: #3C5128;
+	font-size: 1.5em;
+	padding: 0.5em;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-o-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-moz-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+	-webkit-text-shadow: 0px -1px 0px rgba(0,0,0,0.25);
+
+.servicios_anexos figure img
+	border: 5px solid #eee;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+
+.solo_desktop
+	display: none;
+
+.subpaginas
+	display: block;
+	padding-left: 1em;
+
+.subpaginas li
+	display: inline-block;
+
+.subpaginas li a
+	background: $oliva;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	display: inline-block;
+	margin: 0.5em 0.2em;
+	text-decoration: none;
+
+.subpaginas li a:before
+	content: "\e61e";
+	font-family: "icomoon";
+	font-size: 0.8em;
+	margin-right: 0.5em;
+
+.subpaginas li.current_page_item a, .subpaginas li.current-menu-item a
+	display: none;
+
+.up
+	background: rgb(103,142,141);
+	border: 1px rgb(73,100,99) solid;
+	bottom: 0.5em;
+	box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-o-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-ms-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	-webkit-box-shadow: 0px -15px 15px 0px rgba(0,0,0,0.25) inset, 0px 1px 0px 0px rgba(255,255,255,0.5) inset;
+	font-family: monospace;
+	font-size: 1em;
+	left: 0.5em;
+	padding: 0.3em 0.4em 0 0.4em;
+	position: fixed;
+	z-index: 34;
+
+
+// Todo lo de Responsive Web Design
+@media screen and (min-width: 340px)
+	article.article_right img.aligncenter
+
+		border: 5px solid #fff;
+		height: auto;
+		margin: 0 auto;
+		width: 260px;
+		
+	div.imagen figure img
+
+		border: 5px solid #fff;
+	
+	h1, h2, h3, h4, h5, h6
+		padding-left: 1em;
+	
+	.table td, .table th
+		padding: 0.3em;
+	
+	#bg_top
+
+		background: #26331F;
+		background: -moz-linear-gradient(top, #26331F 0%, #3C512A 49%, #547137 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#627d4d), color-stop(49%,#3C512A), color-stop(100%,#547137));
+		background: -webkit-linear-gradient(top, #26331F 0%,#3C512A 49%,#547137 100%);
+		background: -o-linear-gradient(top, #26331F 0%,#3C512A 49%,#547137 100%);
+		background: -ms-linear-gradient(top, #26331F 0%,#3C512A 49%,#547137 100%);
+		background: linear-gradient(to bottom, #26331F 0%,#3C512A 49%,#547137 100%);
+		filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#26331F', endColorstr='#547137',GradientType=0 )");
+		border-bottom: 7px solid #fff;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		height: 13em;
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+	
+	#home_page
+
+		box-shadow: 4px 4px 10px #000;
+		-o-box-shadow: 4px 4px 10px #000;
+		-ms-box-shadow: 4px 4px 10px #000;
+		-moz-box-shadow: 4px 4px 10px #000;
+		-webkit-box-shadow: 4px 4px 10px #000;
+	
+	#home_page.no_home
+		border: 8px solid #fff;
+	
+	.iconos ul li a
+
+		font-size: 1.7em;
+		padding: 3px;
+	
+	.servicios_anexos figure
+
+		margin: auto;
+		width: 260px;
+	
+
+
+// responsive: Solo para Tablets y Desktops
+@media screen and (min-width: 600px)
+	body
+		background: url('../img/izq.gif') bottom left no-repeat fixed,	url('../img/der.gif') bottom right no-repeat fixed;
+		background-size: 126px 257px, 113px 257px;
+		background-color: $oliva;
+	
+	input.ancho, textarea.ancho
+		width: 99%;
+	
+	.table
+		font-size: 1em;
+	
+	/* .table thead th:first-child, .table tbody td:first-child
+		padding-left: 1em; */
+	
+	#calendario, #calendario:hover
+
+		background-size: 50px 50px;
+	
+	#calendario a
+		font-size: 1em;
+	
+	#contenedor
+	
+		max-width: 540px;
+	
+	#home_section #home_slider
+
+		max-width: 530px;
+	
+	.calendario div img
+
+		border: 5px solid #eee;
+		max-width: 300px;
+	
+	.calendario figcaption
+
+		bottom: 1em;
+	
+	.calendario figure
+
+		max-width: 300px;
+	
+	.calendario figure img
+
+		border: 5px solid #eee;
+	
+	.iconos
+
+		position: absolute;
+		right: 1em;
+		top: 1em;
+	
+	.iconos ul li a
+
+		font-size: 2em;
+	
+	.servicios_anexos
+
+		overflow: hidden;
+		position: relative;
+	
+	.servicios_anexos figure
+
+		width: 500px;
+	
+	.servicios_anexos div.enlaces
+
+		height: 374px;
+		margin: auto auto auto 0.5em;
+		overflow: hidden;
+		position: absolute;
+		width: 500px;
+		z-index: 123;
+	
+	.servicios_anexos div.enlaces a
+
+		display: block;
+		height: 100%;
+		width: 100%;
+	
+
+
+@media screen and (min-width: 920px)
+	article.article_right img.aligncenter
+
+		max-width: 290px;
+		text-align: center;
+		
+	article p
+		padding-left: 0.5em;
+	
+	article.blog .imagen figure img
+
+		max-width: 48%;
+	
+	article.habitaciones div.habitacion_listado figcaption .boton_enviar
+
+		display: inline-block;
+	
+	div.blog.entrada-individual div.imagen figure div.imagen_elastica
+
+		width: 48%;
+	
+	div.habitacion_listado
+
+		clear: both;
+		margin-top: 2em;
+	
+	div.habitacion_listado figcaption .boton_enviar
+
+		margin-bottom: 0;
+	
+	div.habitacion_listado h3
+
+		margin-bottom: 0.5em;
+	
+	div.imagen figure
+
+		margin-left: 0.5em;
+		max-width: 98%;
+	
+	div.imagen > figure.excursiones
+
+		margin-left: 1em;
+	
+	div.imagen figure .imagen_elastica
+
+		display: inline-block;
+		max-width: 300px;
+	
+	div.imagen figure .imagen_elastica img
+
+		height: auto;
+		width: 100%;
+	
+	div.imagen figure div span
+
+		display: none;
+	
+	div.imagen.ubicacion figure div span
+
+		bottom: 0em;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		display: block;
+		width: 300px;
+	
+	div.imagen figure figcaption
+
+		border-left: 1px dashed #fff;
+		float: right;
+		width: 47%;
+	
+	figcaption .texto
+		margin-left: 1em;
+	
+	figcaption a.boton_enviar
+		display: inline-block;
+	
+	figure.solo_movil img
+		display: none;
+	
+	form#commentform input
+		max-width: 350px;
+	
+	footer #footer_nav ul li
+		margin: 0;
+		padding: 0;
+	
+	footer #footer_nav ul li a
+
+		background: transparent;
+		border-radius: 0;
+		-o-border-radius: 0;
+		-ms-border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-left: 1px dotted #3C4E28;
+		padding: 0.1em 0.3em 0.1em 0.4em;
+		font-size: 0.8em;
+	
+	footer #footer_nav ul li:first-child a
+		border: none;
+	
+	footer #footer_nav ul li a:hover, footer #footer_nav ul li.current-menu-item a:hover, footer #footer_nav ul li.current_page_item a:hover
+
+		background: transparent;
+		box-shadow: none;
+		-o-box-shadow: none;
+		-ms-box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		color: #EB763E;
+		text-decoration: underline; 
+	
+	footer #footer_nav ul li.current-menu-item a, footer #footer_nav ul li.current_page_item a
+
+		background: transparent;
+		box-shadow: none;
+		-o-box-shadow: none;
+		-ms-box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		border-color: transparent;
+		color: #3C4E28;
+		font-weight: normal;
+		text-decoration: underline;
+	
+	header
+
+		border-bottom: 2px solid $oliva;
+		height: 94px;
+	
+	header.no_home
+		border: none;
+	
+	header nav
+
+		display: block;
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+	
+	input[type="email"], input[type="number"], input[type="tel"], input[type="text"], input[type="url"], textarea
+		max-width: auto;
+	
+	nav
+		background: rgba(34,52,30,0.8);
+		border-bottom: 2px solid #EB472E;
+		bottom: -25em;
+		display: block;
+		font-family: Arial;
+		height: 38px;
+		padding: 0;
+		position: relative;
+		visibility: visible;
+		z-index: 123;
+	
+	nav.no_home
+		background: none;
+		border: none;
+		font-size: 0.93em;
+		top: -104px;
+	
+	nav ul
+		bottom: 22px;
+		display: block;
+		margin: 0 auto;
+		max-width: 1100px;
+		position: relative;
+		text-align: center;
+	
+	nav ul li
+		display: inline;
+		margin: 0 -1px;
+		padding: 0;
+	
+	nav.no_home ul li
+		margin: 0;
+	
+	nav ul li a
+		background: #24321E;
+		border-radius: 0.6em 0.6em 0 0;
+		-o-border-radius: 0.6em 0.6em 0 0;
+		-ms-border-radius: 0.6em 0.6em 0 0;
+		-moz-border-radius: 0.6em 0.6em 0 0;
+		-webkit-border-radius: 0.6em 0.6em 0 0;
+		border: none;
+		display: inline-block;
+		font-size: 0.8em;
+		margin: 0;
+		padding: 0.3em 0.3em;
+	
+	nav ul li.current-menu-item a,	nav ul li.current_page_item a
+		background: rgba(34,52,30,0.8);
+	
+	nav ul li a:before, nav ul li ul li a:before
+		content: "";
+		margin-right: 0;
+	
+	nav.no_home ul li a
+		box-shadow: 1px -1px 1px #46680D;
+		-o-box-shadow: 1px -1px 1px #46680D;
+		-ms-box-shadow: 1px -1px 1px #46680D;
+		-moz-box-shadow: 1px -1px 1px #46680D;
+		-webkit-box-shadow: 1px -1px 1px #46680D;
+		font-size: 0.835em;
+		padding: 0.3em 0.45em;
+	
+	nav.no_home ul li.current_page_item a, nav.no_home ul li.current-menu-item a
+		background: #fff;
+		color: #598C0C;
+		font-weight: normal;
+	
+	nav ul li a:hover
+		background: -moz-radial-gradient(center, ellipse cover, rgba(229,229,229,0.75) 0%, rgba(34,52,30,0.9) 60%, rgba(34,52,30,1) 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(229,229,229,0.75)), color-stop(60%,rgba(34,52,30,0.9)), color-stop(100%,rgba(34,52,30,1)));
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(229,229,229,0.75) 0%,rgba(34,52,30,0.9) 60%,rgba(34,52,30,1) 100%);
+		background: -o-radial-gradient(center, ellipse cover, rgba(229,229,229,0.75) 0%,rgba(34,52,30,0.9) 60%,rgba(34,52,30,1) 100%);
+		background: -ms-radial-gradient(center, ellipse cover, rgba(229,229,229,0.75) 0%,rgba(34,52,30,0.9) 60%,rgba(34,52,30,1) 100%);
+		background: radial-gradient(ellipse at center, rgba(229,229,229,0.75) 0%,rgba(34,52,30,0.9) 60%,rgba(34,52,30,1) 100%);
+		color: #eee;
+		transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+	
+	nav ul li ul
+		display: none;
+	
+	section article.article_right, section article.article_left
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+	
+	section article.article_left.habitacion
+		border-right: 1px dashed #fff;
+		padding-right: 0.85em;
+	
+	section article.article_right
+		border-left: 1px dashed #fff;
+	
+	section article.article_right.habitacion
+		border-left: none;
+	
+	section article.habitacion .boton_enviar
+		display: inline-block;
+	
+	textarea#comment
+		width: auto;
+	
+	#boton_menu
+		display: none;
+	
+	#calendario
+		float: right;
+		position: absolute;
+		right: 0;
+		top: 6.2em;
+		width: 45%;
+	
+	#calendario a
+		direction: block;
+		margin-left: 3em;
+	
+	#cont_5d14fd74b6c44d840b5d3a857a413018
+		display: block;
+	
+	#contenedor
+		max-width: 854px;
+	
+	#contenedor.no_home
+		position: relative;
+		top: 3em;
+	
+	#home_section #home_slider
+		max-width: 800px;
+	
+	#home_slider div.back, #home_slider div.next
+		top: 45%;
+	
+	#home_section
+		margin-top: 1em;
+	
+	#logo_bg
+		box-shadow: 0px -3px 5px -3px #000 inset;
+		-o-box-shadow: 0px -3px 5px -3px #000 inset;
+		-ms-box-shadow: 0px -3px 5px -3px #000 inset;
+		-moz-box-shadow: 0px -3px 5px -3px #000 inset;
+		-webkit-box-shadow: 0px -3px 5px -3px #000 inset;
+	
+	.article_left div.vacaciones figure.solo_movil img, .article_left div.vacaciones figure.solo_movil div span
+		display: block;
+	
+	.calendario figcaption
+		bottom: 2em;
+	
+	.calendario figure
+		display: block;
+		margin: auto 3em 1em auto;
+	
+	.der
+		float: right;
+	
+	.habitaciones_listado .habitacion_listado .imagen figure figcaption
+		border-left: none;
+		float: left;
+	
+	.habitaciones_listado .habitacion_listado .imagen figure img
+		float: right;
+		max-width: 300px;
+		position: relative;
+		right: 2.5em;
+		top: 3em;
+	
+	.iconos
+		position: absolute;
+		right: 1em;
+		top: 0;
+	
+	.iconos ul li a
+		font-size: 3em;
+	
+	.iconos ul li:hover ul li:after
+		right: 1.2em;
+	
+	.izq
+		float: left;
+
+	.navegacion--listado
+		&-cerrar
+			height auto
+			opacity 1
+			visibility visible
+	
+	.ocultar
+		display: inline-block;
+	
+	.servicios_anexos div
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+	
+	.servicios_anexos div.enlaces
+		height: 307px;
+		margin-left: 0;
+		top: 2em;
+		width: 400px;
+	
+	.servicios_anexos figure
+		display: inline-block;
+		margin-top: 2em;
+		vertical-align: top;
+		width: 400px;
+	
+	.solo_desktop
+		display: block;
+	
+	.up
+		display: none;
