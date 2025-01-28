@@ -851,3 +851,10 @@ function wps_deregister_styles() {
 	wp_dequeue_style( 'global-styles' ); // REMOVE THEME.JSON
 }
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
+
+// Mostrar un favicón personalizado en el panel de administración
+function faviconAdmin()
+{
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_stylesheet_directory_uri() . '/favicon.ico" />';
+}
+add_action( 'admin_head', 'faviconAdmin' );
