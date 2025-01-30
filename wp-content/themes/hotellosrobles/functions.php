@@ -602,26 +602,6 @@ function no_errors_please()
 add_filter('login_errors','no_errors_please');
 
 
-// Quitar cajas del escritorio
-function quita_cajas_escritorio()
-{
-	// if( !current_user_can('manage_options') )
-	// {
-		remove_meta_box('dashboard_activity', 'dashboard', 'normal' ); // Actividad
-		remove_meta_box('dashboard_right_now', 'dashboard', 'normal');   // Ahoramismo
-		remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); // Comentarios recientes
-		remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');  // Enlaces entrantes
-		remove_meta_box('dashboard_plugins', 'dashboard', 'normal');   // Plugins
-		remove_meta_box('dashboard_quick_press', 'dashboard', 'side');  // Publicación rápida
-		remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');  // Borradores recientes
-		remove_meta_box('dashboard_primary', 'dashboard', 'side');   // Noticas del blog de WordPress
-		remove_meta_box('dashboard_secondary', 'dashboard', 'side');   // Otras noticias de WordPress
-	// utiliza 'dashboard-network' como segundo parámetro para quitar cajas del escritorio de red.
-	// }
-}
-add_action('wp_dashboard_setup', 'quita_cajas_escritorio' );
-
-
 // Removiendo el panel de bienvenida del wordpress
 remove_action('welcome_panel', 'wp_welcome_panel');
 
@@ -719,7 +699,7 @@ function eg_create_sitemap()
 	fclose($fp);
 };
 
-//Función para Minificar el HTML
+// Función para Minificar el HTML
 class WP_HTML_Compression
 {
 	protected $compress_css = true;

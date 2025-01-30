@@ -8,7 +8,11 @@
 wp-admin/
 wp-content/index.php
 wp-content/languages
-wp-content/plugins/index.php
+wp-content/plugins/classic-editor
+wp-content/plugins/contact-form-7
+wp-content/plugins/limit-login-attempts
+wp-content/plugins/really-simple-captcha
+
 wp-content/themes/index.php
 wp-includes/
 wp-content/uploads/wpcf7_captcha
@@ -22,11 +26,14 @@ datitos
 node_modules
 *.xml
 *.json
+*.zip
+*.gz
+*.rar
 
 
 
 # Example plugin
-/wp-content/plugins/hello.php
+/wp-content/plugins/*.php
 
 
 # Log files
