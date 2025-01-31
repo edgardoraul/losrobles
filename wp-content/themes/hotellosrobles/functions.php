@@ -604,9 +604,9 @@ add_filter('login_errors','no_errors_please');
 
 // Removiendo el panel de bienvenida del wordpress
 remove_action('welcome_panel', 'wp_welcome_panel');
-
+/* 
 //Relativas las urls
-// add_action( 'template_redirect', 'relative_url' );
+add_action( 'template_redirect', 'relative_url' );
 function relative_url()
 {
 	// Don't do anything if:
@@ -630,12 +630,11 @@ function relative_url()
 	'year_link',
 
 	// site location
-	//'option_siteurl',
-	//'option_home',
-	//'admin_url',
+	// 'option_home',
+	// 'admin_url',
 	// 'home_url',
 	// 'site_url',
-	'site_option_siteurl',
+	// 'site_option_siteurl',
 	'network_home_url',
 	'network_site_url',
 
@@ -659,7 +658,6 @@ function relative_url()
 	'script_loader_src', // plugin scripts url
 	'style_loader_src', // plugin styles url
 	'get_theme_root_uri',
-	'home_url'
 	);
 
 	foreach ( $filters as $filter )
@@ -668,6 +666,8 @@ function relative_url()
 	}
 	home_url($path = '', $scheme = null);
 };
+*/
+
 
 // Mapa de Sitio
 add_action("publish_post", "eg_create_sitemap");

@@ -10,8 +10,6 @@
 			<div id="slider" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="2000" data-cycle-pause-on-hover="true" data-cycle-pager="#adv-custom-pager" data-cycle-next=".next" data-cycle-prev=".back" >
 			
 			<?php //Mostrando el contenido de la página Inicio
-			//$recent = new WP_Query("page_id=77"); while($recent->have_posts()) : $recent->the_post();
-
 			$args = array (
 				'pagename' => 'inicio',
 			);
@@ -25,83 +23,34 @@
 				while ( $query->have_posts() )
 				{
 					$query->the_post();
-					// do something
-			?>
-				
-				
 
-				<?php if(wpmd_is_phone())
-				{
-					$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));
-				?>
-
-					<?php if ($attachID !== '')
+					// Seleccionamos las imágenes según el dispositivo
+					if( wpmd_is_phone() ) {
+						$imagen_seleccionada = "custom-thumb-600-450";
+					} elseif( wpmd_is_tablet() ) {
+						$imagen_seleccionada = "custom-thumb-1060-795";
+					} else {
+						$imagen_seleccionada = "custom-thumb-1600-1200";
+					}
+					
+					// Mostramos las imágenes repetibles según el dispositivo seleccionado
+					$attachID = ( get_post_meta( $post->ID, 'custom_imagenrepetible',true) );
+					if ($attachID !== '')
 					{
 						foreach ($attachID as $item)
 						{
-							$imagen = wp_get_attachment_image_src($item,'custom-thumb-600-450'); 
+							$imagen = wp_get_attachment_image_src($item, $imagen_seleccionada); 
 							$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 							$descripcion = get_post_field('post_content', $item); 
-							echo '<img class="item" src="' . $imagen[0] . '"';
-							
-								echo ' alt="' . $alt . '"';
-							
-							echo ' />';
-						};
-					};
-				};?>
-				
-				
-				<?php if(wpmd_is_tablet())
-				{
-					$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));?>
-					
-					<?php if ($attachID !== '')
-					{
-						foreach ($attachID as $item)
-						{
-							$imagen = wp_get_attachment_image_src($item,'custom-thumb-1060-795');
-							$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
-							$descripcion = get_post_field('post_content', $item);
-							echo '<img class="item" src="' . $imagen[0] . '"';
-							
-								echo ' alt="' . $alt . '"';
-							
-							echo ' />';
-						};
-					};
-				};?>
-				
-
-				<?php if(wpmd_is_notdevice())
-				{
-					$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));?>
-				
-					<?php if ($attachID !== '')
-					{
-						foreach ($attachID as $item)
-						{
-							$imagen = wp_get_attachment_image_src($item,'custom-thumb-1600-1200');
-							$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
-							$descripcion = get_post_field('post_content', $item);
-							echo '<img class="item" src="' . $imagen[0] . '"';
-							
-								echo ' alt="' . $alt . '"';
-							
-							echo ' />';
-						};
-					};
-				};?>
-			
-			
-			<?php
+							echo '<img class="item" src="' . $imagen[0] . '" alt="' . $alt . '" />';
+						}
 					}
-				} else {
-					// no posts found
+
 				}
-				// Restore original Post Data
-				wp_reset_postdata();
-			?>
+			}
+			
+			// Restore original Post Data
+			wp_reset_postdata();?>
 			
 
 			<div class="navegacion">
