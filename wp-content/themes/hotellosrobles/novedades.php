@@ -23,26 +23,29 @@
 				<div class="imagen">
 				<figure>
 					<a href="<?php the_permalink();?>">
-					<?php if(wpmd_is_notdevice()) {//Desktops
-						if (has_post_thumbnail()){the_post_thumbnail('custom-thumb-800-x');
-							} else {
-								echo '<img alt="'.__('Sin imagen', 'hotellosrobles').'" src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" />';
-							}
-						}
-					;?>
-					<?php if(wpmd_is_tablet()) {//Tablets
-						if (has_post_thumbnail()){the_post_thumbnail('custom-thumb-1000-x');
-							} else {
-								echo '<img alt="'.__('Sin imagen', 'hotellosrobles').'" src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" />';
-							}
-						}
-					;?>
-					<?php if(wpmd_is_phone()) {//Smartphones
-						if (has_post_thumbnail()){the_post_thumbnail('custom-thumb-600-x');
-							} else {
-								echo '<img alt="'.__('Sin imagen', 'hotellosrobles').'" src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" />';
-							}
-						}
+					
+					<?php 
+					// Smartphones
+					if( wpmd_is_phone() ) {
+						$imagen_size = "custom-thumb-600-x";
+					}
+					
+					// tablets
+					elseif ( wpmd_is_tablet() ) {
+						$imagen_size = "custom-thumb-1000-x";
+					}
+
+					// desktops
+					else {
+						$imagen_size = "custom-thumb-800-x";
+					}
+
+
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail( $imagen_size );
+					} else {
+						echo '<img alt="'.__('Sin imagen', 'hotellosrobles').'" src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" />';
+					}
 					;?>	
 					</a>
 					<figcaption>

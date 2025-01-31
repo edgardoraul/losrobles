@@ -8,7 +8,7 @@
 <?php get_header();?>
 		
 		<?php //El loop de WordPress
-		if (have_posts()) : while (have_posts()) : the_post(); get_page($page_id); $page_data = get_page($page_id);?>
+		if (have_posts()) : while (have_posts()) : the_post();?>
 		<div class="clearfix"></div>
 		<h1><?php the_title();?></h1>
 		<article class="article_left habitacion">
@@ -47,7 +47,7 @@
 					$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 					$descripcion = get_post_field('post_content', $item);
 					echo '<a title="'.$alt.'" class="fancybox" rel="gallery1" href="'.$imagen[0].'">';
-					//if (count($alt)) {};
+					
 					echo '</a>';};?>
 					<?php };?>
 
@@ -58,7 +58,7 @@
 					$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 					$descripcion = get_post_field('post_content', $item);
 					echo '<a title="'.$alt.'" class="fancybox" rel="gallery1" href="'.$imagen[0].'">';
-					//if (count($alt)) {};
+					
 					echo '</a>';};?>
 					<?php };?>
 
@@ -94,7 +94,7 @@
 					$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 					$descripcion = get_post_field('post_content', $item);
 					echo '<img alt="'.$alt.'" src="'.$imagen[0].'" ';
-					//if (count($alt)) {};
+
 					echo '/>';};?>	
 				</figure><!-- .solo_movil -->
 			</div><!-- .imagen -->

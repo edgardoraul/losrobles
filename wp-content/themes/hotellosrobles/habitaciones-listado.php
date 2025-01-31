@@ -35,21 +35,20 @@
 				<div class="imagen">
 				<figure>
 					<a href="<?php echo get_page_link( $post->ID );?>">
-						<?php //Mostramos si es un Desktop y/o Smartphone						
-						if(wpmd_is_nottab()){
-							if(has_post_thumbnail()) {
-							the_post_thumbnail('custom-thumb-600-450');
+						<?php
+							if ( has_post_thumbnail() ) {
+							
+								// Mostramos si es un Desktop y/o Smartphone						
+								if( wpmd_is_nottab() ) {
+									the_post_thumbnail('custom-thumb-600-450');
+								} else { // Para tablets
+									the_post_thumbnail('custom-thumb-1000-800');
+								};
+								
 							} else {
 								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
 							}
-						};
-						if(wpmd_is_tablet()){//Mostramos si es una Tablet
-							if(has_post_thumbnail()) {
-							the_post_thumbnail('custom-thumb-1000-800');
-							} else {
-								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
-							}
-						}?>
+						?>
 					</a>
 					<figcaption>
 						<?php the_content();?>
@@ -66,21 +65,20 @@
 				<div class="imagen">
 				<figure>
 					<a href="<?php echo get_page_link( $post->ID );?>">
-						<?php //Mostramos si es un Desktop y/o Smartphone						
-						if(wpmd_is_nottab()){
-							if(has_post_thumbnail()) {
-							the_post_thumbnail('custom-thumb-600-450');
+						<?php
+							if ( has_post_thumbnail() ) {
+							
+								// Mostramos si es un Desktop y/o Smartphone						
+								if( wpmd_is_nottab() ) {
+									the_post_thumbnail('custom-thumb-600-450');
+								} else { // Para tablets
+									the_post_thumbnail('custom-thumb-1000-800');
+								};
+								
 							} else {
 								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
 							}
-						};
-						if(wpmd_is_tablet()){//Mostramos si es una Tablet
-							if(has_post_thumbnail()) {
-							the_post_thumbnail('custom-thumb-1000-800');
-							} else {
-								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
-							}
-						}?>
+						?>
 					</a>
 					<figcaption>
 						<?php the_content();?>
@@ -97,21 +95,20 @@
 				<div class="imagen">
 				<figure>
 					<a href="<?php echo get_page_link( $post->ID );?>">
-				<?php
-					if(wpmd_is_nottab()) {//Mostramos si es un Desktop y/o Smartphone
-						if(has_post_thumbnail()) {
-						the_post_thumbnail('custom-thumb-600-450');
+					<?php
+						if ( has_post_thumbnail() ) {
+						
+							// Mostramos si es un Desktop y/o Smartphone						
+							if( wpmd_is_nottab() ) {
+								the_post_thumbnail('custom-thumb-600-450');
+							} else { // Para tablets
+								the_post_thumbnail('custom-thumb-1000-800');
+							};
+							
 						} else {
-								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
-							}
-					};
-					if(wpmd_is_tablet()){//Mostramos si es una Tablet
-						if(has_post_thumbnail()) {
-						the_post_thumbnail('custom-thumb-1000-800');
-						} else {
-								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
+							echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
 						}
-					};?>
+					?>
 					</a>
 					<figcaption>
 						<?php the_content();?>
@@ -128,20 +125,20 @@
 				<div class="imagen">
 				<figure>
 					<a href="<?php echo get_page_link( $post->ID );?>">
-					<?php if(wpmd_is_nottab()){//Mostramos si es un Desktop y/o Smartphone
-						if(has_post_thumbnail()) {
-							the_post_thumbnail('custom-thumb-600-450');
+						<?php
+							if ( has_post_thumbnail() ) {
+							
+								// Mostramos si es un Desktop y/o Smartphone						
+								if( wpmd_is_nottab() ) {
+									the_post_thumbnail('custom-thumb-600-450');
+								} else { // Para tablets
+									the_post_thumbnail('custom-thumb-1000-800');
+								};
+								
 							} else {
 								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
 							}
-						};
-						if(wpmd_is_tablet()){//Mostramos si es una Tablet
-							if(has_post_thumbnail()) {
-							the_post_thumbnail('custom-thumb-1000-800');
-							} else {
-								echo '<img src="'.get_stylesheet_directory_uri().'/img/sin_imagen2.png" alt="'.__('Sin imagen', 'hotellosrobles').'" />';
-							}
-						}?>
+						?>
 					</a>
 					<figcaption>
 						<?php the_content();?>
