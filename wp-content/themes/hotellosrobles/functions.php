@@ -40,7 +40,7 @@ jQuery(document).ready(function()
 // Sitemap en xml
 // require_once "includes/sitemap.php";
 
-
+ 
 // Deshabilitar Iconos Emoji
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
@@ -66,7 +66,7 @@ remove_action( 'wp_head', 'wp_resource_hints', 2 );
 remove_action( 'wp_head', 'dns-prefetch' );
 
 
-/* Agregar clases a los enlances de los posts next y back */
+// Agregar clases a los enlances de los posts next y back
 function add_class_next_post_link($html)
 {
 	$html = str_replace('<a', '<a class="boton green"', $html);
@@ -310,27 +310,6 @@ register_nav_menus (array(
 );
 
 
-// Agregar nofollow a los enlaces externos
-function auto_nofollow($content)
-{
-    return preg_replace_callback('/<a>]+/', 'auto_nofollow_callback', $content);
-}
-function auto_nofollow_callback($matches)
-{
-    $link = $matches[0];
-    $site_link = get_bloginfo('url');
-    if (strpos($link, 'rel') === false)
-    {
-        $link = preg_replace("%(href=S(?!$site_link))%i", 'rel="nofollow" $1', $link);
-    }
-    elseif (preg_match("%href=S(?!$site_link)%i", $link))
-    {
-        $link = preg_replace('/rel=S(?!nofollow)S*/i', 'rel="nofollow"', $link);
-    }
-    return $link;
-}
-add_filter('comment_text', 'auto_nofollow');
-
 
 //Habilitar botones de edición avanzados
 function habilitar_mas_botones($buttons)
@@ -357,14 +336,6 @@ function add_custom_meta_box()
 	'page', // sólo para páginas
 	'normal', // contexto
 	'high'); // prioridad
-
-	/*add_meta_box(
-	'custom_meta_box', // id
-	'<strong>Subir las fotos del producto desde aquí</strong>', // título
-	'show_custom_meta_box', // función a la que llamamos
-	'post', // sólo para entradas
-	'normal', // contexto
-	'high'); // prioridad*/
 };
 add_action('add_meta_boxes', 'add_custom_meta_box');
 
@@ -394,9 +365,7 @@ function show_custom_meta_box()
 {
 	global $custom_meta_fields, $post;
 	// Usamos nonce para verificación
-	/*echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
-	Reemplazé por lo de más abajo para desaparecer los errores del depurador
-	*/
+
 
 	wp_nonce_field( basename( __FILE__ ), 'custom_meta_box_nonce' );
 	// Creamos la tabla de campos personalizados y empezamos un loop con todos ellos
@@ -500,9 +469,6 @@ function save_custom_meta($post_id)
 {
 	global $custom_meta_fields;
 	// verificamos usando nonce
-	/*if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
-
-	Reemplazé por lo de más abajo para desaparecer los errores del depurador.*/
 
 	if (!isset($_POST['custom_meta_box_nonce']) || !wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
 	return $post_id;
@@ -604,9 +570,9 @@ add_filter('login_errors','no_errors_please');
 
 // Removiendo el panel de bienvenida del wordpress
 remove_action('welcome_panel', 'wp_welcome_panel');
-/* 
+
 //Relativas las urls
-add_action( 'template_redirect', 'relative_url' );
+// add_action( 'template_redirect', 'relative_url' );
 function relative_url()
 {
 	// Don't do anything if:
@@ -666,7 +632,7 @@ function relative_url()
 	}
 	home_url($path = '', $scheme = null);
 };
-*/
+
 
 
 // Mapa de Sitio
@@ -823,7 +789,7 @@ function wp_html_compression_start()
 // add_action('get_header', 'wp_html_compression_start');
 
 
-/*  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9 */
+//  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9
 function wps_deregister_styles() {
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
