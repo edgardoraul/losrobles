@@ -804,3 +804,9 @@ function faviconAdmin()
 	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_stylesheet_directory_uri() . '/favicon.ico" />';
 }
 add_action( 'admin_head', 'faviconAdmin' );
+
+
+function desactivar_scripts_raros() {
+	wp_deregister_script( 'wp-i18n' );
+}
+add_action( "desactivar_scripts_raros", "wp_enqueue_scripts", 100 );
