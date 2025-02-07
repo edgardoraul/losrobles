@@ -22,21 +22,28 @@ function tarifas_manager_check_tables() {
     
     $charset_collate = $wpdb->get_charset_collate();
     
-    // Crear tabla de tarifas
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'tarifas_manager';
+    $seasons_table = $wpdb->prefix . 'tarifas_seasons';
+    $charset_collate = $wpdb->get_charset_collate();
+    
     if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
         $sql = "CREATE TABLE $table_name (
             id INT NOT NULL AUTO_INCREMENT,
-            habitacion VARCHAR(255) NOT NULL,
-            temporada1 VARCHAR(255) NOT NULL,
-            temporada2 VARCHAR(255) NOT NULL,
-            temporada3 VARCHAR(255) NOT NULL,
-            temporada4 VARCHAR(255) NOT NULL,
-            temporada5 VARCHAR(255) NOT NULL,
-            PRIMARY KEY (id)
-        ) $charset_collate;";
+            hab_post_id BIGINT(20) UNSIGNED NOT NULL,
+            temporada_id INT NOT NULL,
+            temp_tarifa DECIMAL(10,2) NOT NULL,
+            PRIMARY KEY (id),
+            KEY hab_post_id (hab_post_id),
+            KEY temporada_id (temporada_id),
+            CONSTRAINT fk_hab_post FOREIGN KEY (hab_post_id) REFERENCES {$wpdb->posts}(ID) ON DELETE CASCADE,
+            CONSTRAINT fk_temporada FOREIGN KEY (temporada_id) REFERENCES $seasons_table(id) ON DELETE CASCADE
+        ) $charset_collate ENGINE=InnoDB;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql);
     }
+    
     
     // Crear tabla de temporadas
     if ($wpdb->get_var("SHOW TABLES LIKE '$seasons_table'") != $seasons_table) {
