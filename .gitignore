@@ -5,7 +5,7 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-wp-admin/
+wp-admin
 wp-content/index.php
 wp-content/languages
 wp-content/plugins/classic-editor
@@ -22,6 +22,7 @@ license.txt
 readme.html
 wp-*.php
 xmlrpc.php
+Datos
 datitos
 node_modules
 *.xml
@@ -33,14 +34,14 @@ node_modules
 
 
 # Example plugin
-/wp-content/plugins/*.php
+wp-content/plugins/*.php
 
 
 # Log files
 *.log
 
 # htaccess
-/.htaccess
+.htaccess
 
 # All plugins
 #
