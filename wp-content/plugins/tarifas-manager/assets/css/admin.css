@@ -1,0 +1,33 @@
+#tarifas-table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#tarifas-table th,
+#tarifas-table td {
+    border: 1px solid #ddd;
+}
+
+#tarifas-table th {
+    font-weight: bolder;
+    padding: 8px;
+    text-align: center;
+}
+
+#tarifas-table td {
+    padding: 0;
+}
+
+#tarifas-table th input,
+#tarifas-table td input {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    padding: 8px;
+    width: 100%;
+}
